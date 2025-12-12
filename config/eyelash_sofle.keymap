@@ -81,20 +81,18 @@
 
         sym_layer {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&trans  &trans  &trans            &trans             &trans            &trans         &trans  &trans     &trans                &trans                 &trans     &trans  &trans
+&trans  &trans  &kp LESS_THAN     &kp LESS_THAN      &kp GREATER_THAN  &kp PIPE       &trans  &kp POUND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS  &trans  &trans
+&trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL         &kp DOLLAR     &trans  &kp CARET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCL   &trans  &trans
+&trans  &trans  &kp GRAVE         &kp ASTERISK       &kp SLASH         &kp PERCENT    &trans  &kp AT     &kp DOUBLE_QUOTES     &kp SINGLE_QUOTE       &kp PLUS   &trans  &trans
+&trans  &trans  &trans            &trans             &trans            &trans         &trans  &trans     &trans                &trans                 &trans     &trans
             >;
 
-            display-name = "layer2";
-            sensor-bindings = <&scroll_encoder>;
             label = "Symbols";
+            sensor-bindings = <&scroll_encoder>;
         };
 
         ctrl_layer {
-            display-name = "layer2";
             bindings = <
 &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
 &trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
@@ -103,8 +101,18 @@
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
+            display-name = "layer2";
             sensor-bindings = <&scroll_encoder>;
             label = "Control";
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        conditional_ctrl_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
