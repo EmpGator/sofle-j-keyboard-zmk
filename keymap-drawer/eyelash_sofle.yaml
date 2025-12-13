@@ -25,7 +25,7 @@ layers:
   - Y
   - O
   - U
-  - P
+  - AltGr+O
   - '?'
   - $$mdi:apple-keyboard-shift$$
   - N
@@ -39,7 +39,7 @@ layers:
   - A
   - E
   - I
-  - {t: ;, s: ':'}
+  - AltGr+A
   - $$mdi:apple-keyboard-control$$
   - X
   - B
@@ -51,7 +51,7 @@ layers:
   - F
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - {t: '-', s: _}
   - {t: '''', s: '"'}
   - $$mdi:volume-off$$
   - LEFT WIN
@@ -60,10 +60,10 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:keyboard-space$$
   - Symbols
-  - {t: REPEAT, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-shift$$'}
   - RIGHT GUI
   Navigation:
   - {t: '`', s: '~'}
@@ -146,7 +146,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - <
+  - '&'
   - <
   - '>'
   - '|'
