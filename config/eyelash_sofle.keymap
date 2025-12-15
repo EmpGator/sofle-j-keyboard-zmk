@@ -88,7 +88,7 @@
 &trans  &trans  &trans            &trans             &trans            &trans         &trans  &trans     &trans                &trans                 &trans     &trans
             >;
 
-            dislay-name = "Sym";
+            display-name = "Sym";
             label = "Symbols";
             sensor-bindings = <&scroll_encoder>;
         };
