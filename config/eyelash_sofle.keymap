@@ -62,7 +62,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "LAYER0";
+            display-name = "Base";
         };
 
         nav_layer {
@@ -74,7 +74,7 @@
 &kp C_MUTE  &trans           &trans          &trans            &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
-            display-name = "layer1";
+            display-name = "Nav";
             sensor-bindings = <&scroll_encoder>;
             label = "Navigation";
         };
@@ -88,6 +88,7 @@
 &trans  &trans  &trans            &trans             &trans            &trans         &trans  &trans     &trans                &trans                 &trans     &trans
             >;
 
+            dislay-name = "Sym";
             label = "Symbols";
             sensor-bindings = <&scroll_encoder>;
         };
@@ -101,7 +102,7 @@
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &to 4
             >;
 
-            display-name = "layer2";
+            display-name = "Ctrl";
             sensor-bindings = <&scroll_encoder>;
             label = "Control";
         };
@@ -115,7 +116,8 @@
 &kp LCTRL         &mo 1   &kp LEFT_ALT  &kp LCTRL  &kp SPACE  &kp RETURN    &trans           &kp ENTER  &kp SPACE  &kp RALT   &kp RCTRL  &to 0
             >;
 
-            label = "qwerty";
+            display-name = "Qwerty";
+            label = "Qwerty";
         };
     };
 
